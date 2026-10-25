@@ -1,19 +1,424 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv = "refresh" content = "0 ; url = './html/index.html'"/>
-  <title>GAB</title>
-  <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.ico" />
-  <link rel="stylesheet" href="./assets/libs/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./assets/libs/aos-master/dist/aos.css">
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مؤسسة جاب الدولية للنقل GAB — الفرع الثالث لمجموعة البكري</title>
+<meta name="description" content="مؤسسة جاب الدولية للنقل GAB، أحد فروع مجموعة البكري. نقل وخدمات لوجستية للبضائع من وإلى المملكة العربية السعودية، أسطول قاطرات وشاحنات وساحات تخزين.">
+<meta name="theme-color" content="#061a44">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+/* شعار مؤقت يظهر لو ملف ./img/logo.png غير موجود */
+window.lf=function(i){i.onerror=null;i.src="data:image/svg+xml;utf8,"+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="#0b3d91"/><path d="M28 140q72 34 144 0" fill="none" stroke="#e11d2e" stroke-width="9" stroke-linecap="round"/><text x="100" y="116" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="64" fill="#fff">GAB</text></svg>')};
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--b:#0b3d91;--b2:#0a2a6b;--deep:#061a44;--sky:#eaf1fd;--red:#e11d2e;--ink:#0b1630;--mut:#5a6784;--ln:#d9e3f5;--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(18px,5vw,56px);--hdr:64px}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hdr);-webkit-text-size-adjust:100%;overflow-x:clip}
+body{font-family:"Tajawal",system-ui,sans-serif;font-size:16px;line-height:1.75;color:var(--ink);background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:"IBM Plex Sans Arabic","Tajawal",sans-serif;font-weight:700;line-height:1.3}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:var(--pad)}
+.sec{padding-block:clamp(56px,9vw,104px)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;color:var(--red);margin-bottom:12px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+.h2{font-size:clamp(1.5rem,5.6vw,2.7rem);max-width:19ch;position:relative;padding-bottom:16px}
+.h2::after{content:"";position:absolute;bottom:0;inset-inline-start:0;width:56px;height:4px;border-radius:4px;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform 1s .3s var(--ease)}
+.in .h2::after,.h2.in::after{transform:scaleX(1)}
+.dark{color:#fff}
+.progress{position:fixed;top:0;inset-inline:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:right;z-index:130}
+
+/* header */
+.hdr{position:fixed;top:0;inset-inline:0;z-index:100;height:var(--hdr);color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.hdr.s{background:rgba(255,255,255,.93);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--ink);box-shadow:0 1px 0 var(--ln)}
+.mo .hdr{background:transparent;color:#fff;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.hdr .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.lg{display:flex;align-items:center;gap:10px;min-width:0}
+.lg img{width:42px;height:42px;border-radius:12px;background:#fff;padding:3px;object-fit:contain;flex-shrink:0}
+.lg b{display:block;font-family:"IBM Plex Sans Arabic",sans-serif;font-size:15px;line-height:1.2}
+.lg small{display:block;font-size:11.5px;opacity:.75;line-height:1.3}
+.menu{display:none;gap:26px;font-weight:500;font-size:15px}
+.menu a{position:relative;padding-block:4px;opacity:.85;transition:opacity .3s}
+.menu a::after{content:"";position:absolute;bottom:0;inset-inline:0;height:2px;background:var(--red);transform:scaleX(0);transition:transform .4s var(--ease)}
+.menu a:hover{opacity:1}.menu a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:12px;font-weight:700;font-size:15px;background:var(--red);color:#fff;transition:transform .3s var(--ease),background .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px -8px rgba(225,29,46,.6)}
+.btn.o{background:transparent;border:1.5px solid rgba(255,255,255,.55)}
+.btn.o:hover{background:#fff;color:var(--b2);box-shadow:none}
+.hdr .btn{display:none;min-height:42px;padding:0 20px}
+.burger{width:46px;height:46px;border-radius:14px;border:1.5px solid currentColor;display:grid;place-content:center;gap:6px;justify-items:end;flex-shrink:0}
+.burger i{display:block;width:20px;height:2px;background:currentColor;border-radius:2px;transition:transform .4s var(--ease),opacity .3s,width .3s}
+.burger i:nth-child(2){width:12px}
+.burger.o i:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.o i:nth-child(2){opacity:0}
+.burger.o i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* menu overlay (same circle-reveal opening as the other sites) */
+.mm{position:fixed;inset:0;z-index:99;background:linear-gradient(170deg,var(--b),var(--deep));color:#fff;padding:calc(var(--hdr) + 26px) var(--pad) 30px;display:flex;flex-direction:column;justify-content:space-between;clip-path:circle(0 at 10% 4%);visibility:hidden;transition:clip-path .75s var(--ease)}
+.mm.o{clip-path:circle(150% at 10% 4%);visibility:visible}
+.mm nav a{display:flex;align-items:baseline;gap:14px;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:700;font-size:clamp(1.5rem,7vw,2.2rem);padding-block:12px;border-bottom:1px solid rgba(255,255,255,.14);opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.mm.o nav a{opacity:1;transform:none}
+.mm.o nav a:nth-child(1){transition-delay:.15s}.mm.o nav a:nth-child(2){transition-delay:.22s}.mm.o nav a:nth-child(3){transition-delay:.29s}.mm.o nav a:nth-child(4){transition-delay:.36s}.mm.o nav a:nth-child(5){transition-delay:.43s}
+.mm nav a i{font-style:normal;font-size:13px;color:#ff7a85;font-family:"Tajawal"}
+.mm .mf{display:grid;gap:12px;margin-top:24px}
+.mm .mf p{font-size:14px;opacity:.7;direction:ltr;text-align:right}
+
+/* hero */
+.hero{position:relative;min-height:100svh;background:radial-gradient(110% 70% at 85% 0%,#1a5fd6 0%,transparent 58%),linear-gradient(165deg,var(--b2),var(--deep));color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding-top:calc(var(--hdr) + 36px)}
+.gridbg{position:absolute;inset:-25% 0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:linear-gradient(to bottom,#000 20%,transparent 85%);mask-image:linear-gradient(to bottom,#000 20%,transparent 85%)}
+.hero .wrap{position:relative;z-index:2}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:6px 16px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);animation:fade 1s both}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(225,29,46,.7);animation:pulse 2s infinite}
+.hero h1{font-size:clamp(2.2rem,10vw,5.4rem);font-weight:700;margin-top:18px;max-width:11ch}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 b{display:block;font-weight:inherit;animation:rise 1s var(--ease) both}
+.hero h1 span:nth-child(2) b{animation-delay:.14s}
+.hero h1 em{font-style:normal;position:relative;display:inline-block}
+.hero h1 em::after{content:"";position:absolute;inset-inline:0;bottom:.02em;height:.12em;background:var(--red);border-radius:4px;transform:scaleX(0);transform-origin:right;animation:draw 1s 1s var(--ease) forwards}
+.hero p{margin-top:16px;max-width:42ch;color:rgba(255,255,255,.82);animation:fade 1s .45s both}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;animation:fade 1s .6s both}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;animation:fade 1s .8s both}
+.chips span{font-size:13px;padding:5px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85)}
+.route{position:relative;z-index:1;width:100%;max-width:1200px;margin:20px auto 0;padding-inline:var(--pad)}
+.route svg{width:100%;height:auto;display:block;overflow:visible}
+.route .dash{fill:none;stroke:rgba(255,255,255,.4);stroke-width:2.5;stroke-dasharray:6 9;animation:march 1.4s linear infinite}
+.route text{fill:rgba(255,255,255,.7);font-family:"Tajawal";font-size:14px}
+.route .pin{fill:#fff}
+.route .pu{fill:none;stroke:var(--red);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ping 2.4s ease-out infinite}
+@keyframes rise{from{transform:translateY(110%)}to{transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes draw{to{transform:scaleX(1)}}
+@keyframes march{to{stroke-dashoffset:-30}}
+@keyframes ping{from{transform:scale(.6);opacity:1}to{transform:scale(2.6);opacity:0}}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(225,29,46,0)}100%{box-shadow:0 0 0 0 rgba(225,29,46,0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes mq{to{transform:translateX(50%)}}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+/* ticker */
+.tick{background:var(--b);color:#fff;overflow:hidden;white-space:nowrap;padding-block:14px}
+.tick div{display:inline-flex;gap:26px;animation:mq 34s linear infinite;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:500;font-size:1.05rem}
+.tick span::after{content:"";display:inline-block;width:8px;height:8px;background:var(--red);transform:rotate(45deg);margin-inline-start:26px}
+
+/* about */
+.ag{display:grid;gap:36px;align-items:center}
+.ag p{margin-top:18px;color:var(--mut);max-width:56ch}
+.ag p b{color:var(--b);font-weight:700}
+.vis{position:relative;justify-self:center;width:min(66vw,300px);aspect-ratio:1;border-radius:50%;background:#fff;box-shadow:0 30px 60px -22px rgba(10,42,107,.4);display:grid;place-items:center;padding:14%}
+.vis::before{content:"";position:absolute;inset:-16px;border-radius:50%;border:2px dashed var(--b);opacity:.5;animation:spin 40s linear infinite}
+.vis::after{content:"";position:absolute;inset:-34px;border-radius:50%;border:1px solid var(--ln)}
+.vis img{width:100%;height:100%;object-fit:contain;animation:float 5s ease-in-out infinite}
+.bento{display:grid;gap:12px;margin-top:clamp(36px,6vw,64px)}
+.bc{position:relative;overflow:hidden;background:var(--sky);border-radius:22px;padding:24px 22px;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.bc:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(10,42,107,.35)}
+.bc::before{content:"";position:absolute;top:0;inset-inline:0;height:4px;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.bc:hover::before{transform:scaleX(1)}
+.bc .n{position:absolute;inset-inline-end:16px;top:6px;font-family:"IBM Plex Sans Arabic";font-weight:700;font-size:4.2rem;line-height:1;color:var(--b);opacity:.07}
+.bc .ib{width:50px;height:50px;border-radius:14px;background:var(--b);color:#fff;display:grid;place-items:center;margin-bottom:16px}
+.bc h3{font-size:1.15rem;color:var(--b2)}
+.bc p{font-size:14.5px;color:var(--mut);margin-top:4px}
+.bc.big{background:linear-gradient(160deg,var(--b),var(--deep));color:#fff}
+.bc.big h3{color:#fff}.bc.big p{color:rgba(255,255,255,.78)}.bc.big .ib{background:var(--red)}.bc.big .n{color:#fff}
+
+/* fleet */
+.fleet{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.fleet::before{content:"GAB";position:absolute;inset-inline-end:-2%;top:-6%;font-family:"IBM Plex Sans Arabic";font-weight:700;font-size:clamp(9rem,36vw,26rem);line-height:1;color:#fff;opacity:.035;pointer-events:none}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;position:relative}
+.arrs{display:none;gap:8px}
+.arr{width:48px;height:48px;border-radius:14px;border:1.5px solid rgba(255,255,255,.35);display:grid;place-items:center;color:#fff;transition:background .3s,border-color .3s}
+.arr:hover{background:var(--red);border-color:var(--red)}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:30px calc(var(--pad) * -1) 0;padding:4px var(--pad) 8px;scroll-padding-inline:var(--pad);position:relative}
+.rail::-webkit-scrollbar{display:none}
+.fc{flex:0 0 74%;aspect-ratio:3/4;scroll-snap-align:start;position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#1458c9,#0a2a6b);display:grid;place-items:center;transition:transform .6s var(--ease)}
+.fc:hover{transform:translateY(-8px)}
+.fc>.i{width:34%;height:auto;stroke-width:1;opacity:.22}
+.fc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.fc:hover img{transform:scale(1.08)}
+.fc::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,26,68,.92),rgba(6,26,68,0) 55%)}
+.cap{position:absolute;inset-inline:0;bottom:0;padding:20px;z-index:2}
+.cap small{font-family:"IBM Plex Sans Arabic";color:#ff7a85;font-weight:700;font-size:13px}
+.cap h3{font-size:1.25rem;margin-top:2px}
+.cap p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.55}
+.hint{font-size:13px;color:rgba(255,255,255,.55);margin-top:10px;position:relative}
+
+/* steps */
+.steps{display:grid;gap:0;margin-top:34px}
+.st{position:relative;padding-inline-start:64px;padding-bottom:30px}
+.st:last-child{padding-bottom:0}
+.st::before{content:"";position:absolute;inset-inline-start:21px;top:44px;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transform-origin:top;transition:transform 1s .3s var(--ease)}
+.st:last-child::before{display:none}
+.st.in::before{transform:scaleY(1)}
+.st .no{position:absolute;inset-inline-start:0;top:0;width:44px;height:44px;border-radius:14px;background:var(--b);color:#fff;display:grid;place-items:center;font-family:"IBM Plex Sans Arabic";font-weight:700;transition:background .4s,transform .6s var(--ease)}
+.st.in .no{transform:rotate(360deg)}
+.st:hover .no{background:var(--red)}
+.st h3{font-size:1.1rem;color:var(--b2);padding-top:8px}
+.st p{font-size:14.5px;color:var(--mut)}
+
+/* faq */
+.faqs{background:var(--sky)}
+.fg{display:grid;gap:26px}
+.faq{border-top:1px solid var(--ln)}
+.q{border-bottom:1px solid var(--ln)}
+.q>button{width:100%;display:flex;align-items:center;gap:14px;text-align:start;padding:18px 0;min-height:60px;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:500;font-size:15.5px;line-height:1.5;color:var(--b2)}
+.q>button em{font-style:normal;font-size:13px;color:var(--red);font-weight:700}
+.q>button span{flex:1}
+.pl{position:relative;width:30px;height:30px;border-radius:10px;border:1.5px solid var(--b);flex-shrink:0;transition:background .4s,transform .5s var(--ease)}
+.pl::before,.pl::after{content:"";position:absolute;inset:50% 8px auto;height:2px;margin-top:-1px;background:var(--b);transition:transform .5s var(--ease),background .3s}
+.pl::after{transform:rotate(90deg)}
+.q.o .pl{background:var(--red);border-color:var(--red);transform:rotate(180deg)}
+.q.o .pl::before,.q.o .pl::after{background:#fff}.q.o .pl::after{transform:rotate(0)}
+.a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.q.o .a{grid-template-rows:1fr}
+.a>div{overflow:hidden}
+.a p{padding:0 44px 20px 0;color:var(--mut);font-size:15px}
+.a a{color:var(--b);font-weight:700;text-decoration:underline}
+
+/* contact */
+.cp{background:linear-gradient(160deg,var(--b),var(--deep));color:#fff;border-radius:28px;padding:clamp(24px,5vw,48px);display:grid;gap:28px;position:relative;overflow:hidden}
+.cp::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:2px dashed rgba(255,255,255,.12);inset-inline-start:-110px;top:-110px;animation:spin 50s linear infinite}
+.cp>*{position:relative}
+.cp .h2{color:#fff}
+.phs{display:grid;gap:10px;margin-top:20px}
+.ph{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);transition:background .3s,transform .4s var(--ease),border-color .3s}
+.ph:hover{background:var(--red);border-color:var(--red);transform:translateX(-6px)}
+.ph .ib{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.14);display:grid;place-items:center;flex-shrink:0}
+.ph small{display:block;font-size:12.5px;opacity:.7;line-height:1.3}
+.ph strong{display:block;direction:ltr;text-align:right;font-family:"IBM Plex Sans Arabic";font-weight:500;font-size:1.05rem}
+.ph.m strong{font-size:.95rem;word-break:break-all}
+.map{border-radius:18px;overflow:hidden;min-height:280px;background:var(--b2)}
+.map iframe{display:block;width:100%;height:100%;min-height:280px;border:0}
+
+/* footer */
+.ftr{background:#030d26;color:rgba(255,255,255,.6);padding-block:34px calc(34px + 84px);font-size:14px}
+.ftr .wrap{display:flex;flex-direction:column;gap:14px}
+.ftr .lg{color:#fff}
+
+/* bottom bar */
+.bar{position:fixed;inset-inline:14px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:90;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:rgba(6,26,68,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:18px;box-shadow:0 14px 34px rgba(0,0,0,.3);transform:translateY(150%);transition:transform .6s var(--ease)}
+.bar.s{transform:none}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;border-radius:12px;font-weight:700;font-size:15px;color:#fff}
+.bar a:first-child{background:var(--red)}
+.bar a:last-child{border:1.5px solid rgba(255,255,255,.4)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);filter:blur(6px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.l{transform:translateX(-46px)}.rv.r{transform:translateX(46px)}.rv.z{transform:scale(.85)}
+.rv.in{opacity:1;transform:none;filter:none}
+
+@media(min-width:760px){
+  body{font-size:17px}
+  .ag{grid-template-columns:1.3fr 1fr;gap:64px}
+  .bento{grid-template-columns:repeat(3,1fr)}
+  .fc{flex-basis:38%}
+  .fg{grid-template-columns:.8fr 1.2fr;gap:64px}
+  .cp{grid-template-columns:1fr 1.1fr;align-items:stretch}
+  .steps{grid-template-columns:repeat(4,1fr);gap:20px}
+  .st{padding-inline-start:0;padding-top:64px;padding-bottom:0}
+  .st::before{inset-inline-start:56px;top:21px;bottom:auto;height:2px;width:calc(100% - 44px);transform:scaleX(0);transform-origin:right}
+  .st.in::before{transform:scaleX(1)}
+}
+@media(min-width:1000px){
+  :root{--hdr:78px}
+  .menu{display:flex}.hdr .btn{display:inline-flex}.burger{display:none}
+  .fc{flex-basis:23%}
+  .arrs{display:flex}.hint{display:none}
+  .bar{display:none}.ftr{padding-bottom:34px}
+  .ftr .wrap{flex-direction:row;justify-content:space-between;align-items:center}
+  .hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;align-items:end}
+  .hero h1{max-width:12ch}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}.rv{opacity:1;transform:none;filter:none}}
+</style>
 </head>
-
 <body>
-<!-- NOTE: Please go to the './html/index.html' file to edit -->
-</body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ph" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="ml" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="tr" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="gl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="st" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12z"/><path d="M9 21v-7h6v7"/></symbol>
+  <symbol id="ar" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+</svg>
+<div class="progress" id="pg"></div>
 
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="lg" href="#top"><img src="./img/logo.png" onerror="lf(this)" alt="شعار جاب GAB"><span><b>جاب الدولية GAB</b><small>للنقل واللوجستيات</small></span></a>
+    <nav class="menu"><a href="#about">عن المؤسسة</a><a href="#fleet">الأسطول</a><a href="#steps">كيف نعمل</a><a href="#faq">الأسئلة الشائعة</a><a href="#contact">تواصل</a></nav>
+    <a class="btn" href="tel:+966126878538">اتصل بنا</a>
+    <button class="burger" id="bg" aria-label="فتح القائمة" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="mm" id="mm">
+  <nav><a href="#about"><i>01</i>عن المؤسسة</a><a href="#fleet"><i>02</i>الأسطول</a><a href="#steps"><i>03</i>كيف نعمل</a><a href="#faq"><i>04</i>الأسئلة الشائعة</a><a href="#contact"><i>05</i>تواصل</a></nav>
+  <div class="mf"><a class="btn" href="tel:+966126878538"><svg class="i"><use href="#ph"/></svg>اتصل الآن</a><p>info@gabfreight.com</p></div>
+</div>
+
+<main id="top">
+<section class="hero">
+  <div class="gridbg" id="gb"></div>
+  <div class="wrap">
+    <div>
+      <span class="pill">الفرع الثالث · مجموعة البكري</span>
+      <h1><span><b>نقل موثوق</b></span><span><b>من وإلى <em>المملكة</em></b></span></h1>
+      <p>مؤسسة جاب الدولية للنقل GAB، شبكة وبنية تحتية للنقل والخدمات اللوجستية يمكنك الاعتماد عليها.</p>
+      <div class="cta"><a class="btn" href="tel:+966126878538"><svg class="i"><use href="#ph"/></svg>اتصل بنا</a><a class="btn o" href="#fleet">شاهد أسطولنا</a></div>
+    </div>
+    <div class="chips"><span>قاطرات وشاحنات</span><span>ساحات تخزين</span><span>شبكة لوجستية</span></div>
+  </div>
+  <div class="route" aria-hidden="true">
+    <svg viewBox="0 0 800 210">
+      <path id="rt" class="dash" d="M30 170 C170 20 330 220 470 110 S720 40 770 90"/>
+      <circle class="pin" cx="30" cy="170" r="7"/><circle class="pu" cx="30" cy="170" r="9"/>
+      <circle class="pin" cx="770" cy="90" r="7"/><circle class="pu" cx="770" cy="90" r="9" style="animation-delay:1.2s"/>
+      <text x="30" y="198" text-anchor="start">من</text><text x="770" y="124" text-anchor="end">إلى</text>
+      <g><rect x="-16" y="-9" width="32" height="18" rx="4" fill="#fff"/><rect x="-16" y="-9" width="32" height="5" rx="2" fill="#e11d2e"/><animateMotion dur="8s" repeatCount="indefinite" rotate="auto"><mpath href="#rt"/></animateMotion></g>
+    </svg>
+  </div>
+</section>
+
+<div class="tick" aria-hidden="true"><div id="tk"></div></div>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="ag">
+      <div>
+        <div class="rv"><div class="eyebrow">عن المؤسسة</div><h2 class="h2">مؤسسة جاب الدولية للنقل</h2></div>
+        <p class="rv" style="--d:.1s">هي <b>أحد فروع مجموعة البكري</b>، ويمكن الاعتماد عليها وعلى شبكتها وبنيتها التحتية للنقل والخدمات اللوجستية للبضائع من وإلى المملكة العربية السعودية.</p>
+        <p class="rv" style="--d:.2s">تمتلك <b>أسطولًا من القاطرات والشاحنات</b> بمختلف الأحجام والأوزان، ولديها ساحات تخزين للحاويات والبضائع العامة عند الطلب.</p>
+      </div>
+      <div class="vis rv z" style="--d:.15s"><img src="./img/logo.png" onerror="lf(this)" alt="شعار جاب GAB"></div>
+    </div>
+    <div class="bento">
+      <article class="bc big rv"><span class="n">01</span><span class="ib"><svg class="i"><use href="#gl"/></svg></span><h3>شبكة وبنية تحتية</h3><p>للنقل والخدمات اللوجستية للبضائع من وإلى المملكة.</p></article>
+      <article class="bc rv" style="--d:.1s"><span class="n">02</span><span class="ib"><svg class="i"><use href="#tr"/></svg></span><h3>أسطول متنوع</h3><p>قاطرات وشاحنات بمختلف الأحجام والأوزان.</p></article>
+      <article class="bc rv" style="--d:.2s"><span class="n">03</span><span class="ib"><svg class="i"><use href="#st"/></svg></span><h3>ساحات تخزين</h3><p>للحاويات والبضائع العامة عند الطلب.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec fleet dark" id="fleet">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><div class="eyebrow">أسطول GAB</div><h2 class="h2">أسطول لكل حمولة</h2></div>
+      <div class="arrs"><button class="arr" data-d="1" aria-label="التالي"><svg class="i" style="transform:scaleX(-1)"><use href="#ar"/></svg></button><button class="arr" data-d="-1" aria-label="السابق"><svg class="i"><use href="#ar"/></svg></button></div>
+    </div>
+    <div class="rail" id="rl">
+      <article class="fc rv z"><svg class="i"><use href="#tr"/></svg><img src="./img/fleet/01.jpg" alt="قاطرات GAB" loading="lazy" onerror="this.remove()"><div class="cap"><small>01</small><h3>قاطرات</h3><p>لنقل الحاويات والحمولات الكبيرة.</p></div></article>
+      <article class="fc rv z" style="--d:.08s"><svg class="i"><use href="#tr"/></svg><img src="./img/fleet/02.jpg" alt="شاحنات GAB" loading="lazy" onerror="this.remove()"><div class="cap"><small>02</small><h3>شاحنات</h3><p>بمختلف الأحجام والأوزان.</p></div></article>
+      <article class="fc rv z" style="--d:.16s"><svg class="i"><use href="#st"/></svg><img src="./img/fleet/03.jpg" alt="ساحات تخزين الحاويات" loading="lazy" onerror="this.remove()"><div class="cap"><small>03</small><h3>ساحات الحاويات</h3><p>تخزين الحاويات عند الطلب.</p></div></article>
+      <article class="fc rv z" style="--d:.24s"><svg class="i"><use href="#st"/></svg><img src="./img/fleet/04.jpg" alt="ساحات البضائع العامة" loading="lazy" onerror="this.remove()"><div class="cap"><small>04</small><h3>البضائع العامة</h3><p>ساحات تخزين للبضائع العامة عند الطلب.</p></div></article>
+    </div>
+    <p class="hint">اسحب يمينًا ويسارًا لعرض المزيد</p>
+  </div>
+</section>
+
+<section class="sec" id="steps">
+  <div class="wrap">
+    <div class="rv"><div class="eyebrow">كيف نعمل</div><h2 class="h2">أربع خطوات حتى تصل بضاعتك</h2></div>
+    <div class="steps">
+      <div class="st rv"><span class="no">1</span><h3>طلب النقل</h3><p>تتواصل معنا وتخبرنا بتفاصيل شحنتك ووجهتها.</p></div>
+      <div class="st rv" style="--d:.1s"><span class="no">2</span><h3>اختيار الأسطول</h3><p>نحدد القاطرة أو الشاحنة المناسبة للحمولة.</p></div>
+      <div class="st rv" style="--d:.2s"><span class="no">3</span><h3>النقل والمتابعة</h3><p>تنطلق الشحنة وتتابعها شبكتنا حتى الوصول.</p></div>
+      <div class="st rv" style="--d:.3s"><span class="no">4</span><h3>التسليم أو التخزين</h3><p>نسلّم الشحنة، أو نخزّنها في ساحاتنا عند الطلب.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faqs" id="faq">
+  <div class="wrap fg">
+    <div class="rv"><div class="eyebrow">الأسئلة الشائعة</div><h2 class="h2">إجابات سريعة لأكثر ما يُسأل عنه</h2></div>
+    <div class="faq" id="fq">
+      <div class="q rv"><button aria-expanded="false"><em>01</em><span>ما هي مؤسسة جاب الدولية للنقل؟</span><i class="pl"></i></button><div class="a"><div><p>هي أحد فروع مجموعة البكري، ويمكن الاعتماد عليها وعلى شبكتها وبنيتها التحتية للنقل والخدمات اللوجستية للبضائع من وإلى المملكة العربية السعودية.</p></div></div></div>
+      <div class="q rv" style="--d:.05s"><button aria-expanded="false"><em>02</em><span>ما الخدمات التي تقدمونها؟</span><i class="pl"></i></button><div class="a"><div><p>نقل البضائع من وإلى المملكة، وتوفير ساحات تخزين للحاويات والبضائع العامة عند الطلب.</p></div></div></div>
+      <div class="q rv" style="--d:.1s"><button aria-expanded="false"><em>03</em><span>ما نوع الأسطول المتوفر؟</span><i class="pl"></i></button><div class="a"><div><p>نمتلك أسطولًا من القاطرات والشاحنات بمختلف الأحجام والأوزان.</p></div></div></div>
+      <div class="q rv" style="--d:.15s"><button aria-expanded="false"><em>04</em><span>هل توفرون تخزينًا للبضائع؟</span><i class="pl"></i></button><div class="a"><div><p>نعم، لدينا ساحات تخزين للحاويات والبضائع العامة عند الطلب.</p></div></div></div>
+      <div class="q rv" style="--d:.2s"><button aria-expanded="false"><em>05</em><span>ما علاقة جاب بمجموعة البكري؟</span><i class="pl"></i></button><div class="a"><div><p>جاب هي الفرع الثالث من فروع مجموعة البكري.</p></div></div></div>
+      <div class="q rv" style="--d:.25s"><button aria-expanded="false"><em>06</em><span>كيف أطلب خدمة النقل؟</span><i class="pl"></i></button><div class="a"><div><p>اتصل على <a href="tel:+966126878538" dir="ltr">+966 12 6878538</a> أو <a href="tel:+966126807592" dir="ltr">+966 12 6807592</a>، أو راسلنا على <a href="mailto:info@gabfreight.com">info@gabfreight.com</a>.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="cp rv">
+      <div>
+        <div class="eyebrow" style="color:#ff7a85">تواصل معنا</div><h2 class="h2">يسعدنا تواصلكم معنا مباشرة</h2>
+        <div class="phs">
+          <a class="ph" href="tel:+966126878538"><span class="ib"><svg class="i"><use href="#ph"/></svg></span><div><small>هاتف</small><strong>+966 12 6878538</strong></div></a>
+          <a class="ph" href="tel:+966126807592"><span class="ib"><svg class="i"><use href="#ph"/></svg></span><div><small>هاتف</small><strong>+966 12 6807592</strong></div></a>
+          <a class="ph m" href="mailto:info@gabfreight.com"><span class="ib"><svg class="i"><use href="#ml"/></svg></span><div><small>البريد الإلكتروني</small><strong>info@gabfreight.com</strong></div></a>
+        </div>
+      </div>
+      <div class="map">
+        <!-- غيّر q= إلى العنوان الدقيق أو استبدل الـ iframe بكود "تضمين خريطة" من Google Maps -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.661224313236!2d39.230056399999995!3d21.4818054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cfa1a8d872a7%3A0x110af0889097517c!2z2LTYsdmD2Kkg2YLYp9im2K8g2KfZhdmK2YYg2KfZhNio2YPYsdmKINmE2YTYtNit2YYg2KfZhNis2YjZiiDZiCDYp9mE2KjYrdix2Yo!5e0!3m2!1sar!2seg!4v1792948432771!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="wrap">
+  <a class="lg" href="#top"><img src="./img/logo.png" onerror="lf(this)" alt=""><span><b>جاب الدولية GAB</b><small>للنقل واللوجستيات</small></span></a>
+  <span>© <span id="yr"></span> جميع الحقوق محفوظة.</span>
+</div></footer>
+
+<div class="bar" id="bar">
+  <a href="tel:+966126878538"><svg class="i"><use href="#ph"/></svg>اتصل</a>
+  <a href="mailto:info@gabfreight.com"><svg class="i"><use href="#ml"/></svg>راسلنا</a>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+
+/* ticker */
+var w=["نقل","خدمات لوجستية","قاطرات","شاحنات","تخزين حاويات","بضائع عامة","من وإلى المملكة"],h="";
+for(var k=0;k<2;k++)w.forEach(function(x){h+="<span>"+x+"</span>"});
+$("#tk").innerHTML=h;
+
+/* scroll: header, progress, bar, parallax */
+var hdr=$("#hdr"),pg=$("#pg"),bar=$("#bar"),gb=$("#gb"),t=false;
+function onS(){
+  var y=scrollY,d=document.documentElement.scrollHeight-innerHeight;
+  hdr.classList.toggle("s",y>30);
+  bar.classList.toggle("s",y>500);
+  pg.style.transform="scaleX("+(d>0?y/d:0)+")";
+  if(y<innerHeight*1.3)gb.style.transform="translateY("+(y*.25)+"px)";
+  t=false;
+}
+addEventListener("scroll",function(){if(!t){t=true;requestAnimationFrame(onS)}},{passive:true});onS();
+
+/* menu */
+var bg=$("#bg"),mm=$("#mm");
+function menu(o){bg.classList.toggle("o",o);mm.classList.toggle("o",o);document.body.classList.toggle("mo",o);bg.setAttribute("aria-expanded",o);document.body.style.overflow=o?"hidden":""}
+bg.onclick=function(){menu(!mm.classList.contains("o"))};
+$$("#mm a").forEach(function(a){a.onclick=function(){menu(false)}});
+addEventListener("keydown",function(e){if(e.key==="Escape")menu(false)});
+
+/* reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;el.classList.add("in");io.unobserve(el);setTimeout(function(){el.style.setProperty("--d","0s")},1600)}})},{threshold:.12});
+$$(".rv").forEach(function(el){io.observe(el)});
+
+/* faq */
+$$(".q>button").forEach(function(b){b.onclick=function(){
+  var q=b.parentNode,open=!q.classList.contains("o");
+  $$(".q.o").forEach(function(x){x.classList.remove("o");x.firstChild.setAttribute("aria-expanded","false")});
+  if(open){q.classList.add("o");b.setAttribute("aria-expanded","true")}}});
+
+/* fleet arrows (RTL aware) */
+$$(".arr").forEach(function(a){a.onclick=function(){var r=$("#rl");r.scrollBy({left:-(+a.dataset.d)*r.clientWidth*.7,behavior:"smooth"})}});
+
+$("#yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
 </html>
